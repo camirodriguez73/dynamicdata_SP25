@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "firstname": "c",
+            "lastname": "cmasd",
+            "address": "asmkdfl",
+            "city": "asdkflja",
+            "state": "aflskdmfa",
+            "zip": "amsldkfm",
+            "email": "skfm@fmaskd.com"
+        },
+        {
+            "firstname": "adksfj",
+            "lastname": "amskdmf",
+            "address": "alksdjf",
+            "city": "asjdlkfj",
+            "state": "asldkfj",
+            "zip": "alskdjf",
+            "email": "adfskm@alkdjf.com"
+        }
+    ]
+}

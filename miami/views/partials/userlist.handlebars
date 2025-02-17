@@ -1,0 +1,19 @@
+<table class="table table-success table-striped">
+    <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+    {{#each users}}
+    <tr>
+        <td>{{firstname}}</td>
+        <td>{{lastname}}</td>
+        <td>{{email}}</td>
+        <td>
+            <a href="/newsletter/details/{{email}}">View Details</a>
+            <a href="/newsletter/delete/{{email}}">Delete</a>
+        </td>
+    </tr>
+    {{/each}}
+</table>

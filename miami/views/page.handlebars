@@ -1,0 +1,11 @@
+{{#if title}}
+<h1>{{title}}</h1>
+{{/if}}
+
+{{>basic}}
+
+{{#if request.query.color}}
+<p>
+    Your favorite color is: {{request.query.color}}
+</p>
+{{/if}}

@@ -8,6 +8,9 @@ const handler = require('./lib/handler')
 //Import navigation data
 let navigation = require("./data/navigation.json")
 
+//import slideshow
+let slideshow = require("./data/slideshow.json")
+
 // Setup template engine
 const handlebars = require('express-handlebars')
 app.engine('handlebars', handlebars.engine());
@@ -15,8 +18,20 @@ app.set('view engine', 'handlebars');
 
 // Create some routes
 app.get('/', (request, response) => {
+    let slides = slideshow.slides.filter((slide) => {
+        return slide.home = true
+    })
+
     response.type("text/html")
-    response.render("home", { title: "Miami Travel Site", nav: navigation })
+    response.render("page", {
+        title: "Miami Travel Site",
+        nav: navigation,
+        slides: slides
+    })
+})
+
+app.get('/page/:page', (request, response) => {
+
 })
 
 app.get('/beaches', (request, response) => {
@@ -51,9 +66,17 @@ app.get('/basic', (req, res) => {
 app.get('/newsletter-signup', handler.newsletterSignup)
 app.post('/newsletter-signup/process', handler.newsletterSignupProcess)
 app.get('/newsletter/list', handler.newsletterSignupList)
-app.get('/newsletter/thankyou', (req, res) => { res.render('thankyou') })
+
+app.get('/newsletter/thankyou', (req, res) => {
+    res.render('thankyou', { nav: navigation })
+})
+
+//Dynamic Routes
 app.get('/newsletter/details/:email', handler.newsletterUser)
 app.get('/newsletter/delete/:email', handler.newsletterUserDelete)
+
+
+
 
 
 // Error handling goes after actual routes

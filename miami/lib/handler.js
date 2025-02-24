@@ -2,8 +2,11 @@ let eList = require("../data/emails.json")
 
 const fs = require("fs")
 
+let navigation = require("../data/navigation.json")
+
+
 exports.newsletterSignup = (req, res) => {
-    res.render('newsletter-signup', { csrf: 'supersecret' })
+    res.render('newsletter-signup', { csrf: 'supersecret', nav: navigation })
 }
 
 exports.newsletterSignupProcess = (req, res) => {
@@ -23,12 +26,12 @@ exports.newsletterSignupProcess = (req, res) => {
     var json = JSON.stringify(eList)
     console.log(json)
     fs.writeFileSync('./data/emails.json', json, 'utf8')
-    res.redirect(303, '/newsletter/thankyou')
+    res.redirect(303, '/newsletter/thankyou',)
 }
 
 exports.newsletterSignupList = (req, res) => {
     console.log(eList)
-    res.render('userspage', { "users": eList.users })
+    res.render('userspage', { "users": eList.users, nav: navigation })
 }
 
 exports.newsletterUser = (req, res) => {
@@ -38,7 +41,7 @@ exports.newsletterUser = (req, res) => {
     })
 
     console.log(userDetails)
-    res.render('userdetails', { "users": userDetails })
+    res.render('userdetails', { "users": userDetails, nav: navigation })
 }
 
 exports.newsletterUserDelete = (req, res) => {
@@ -51,5 +54,6 @@ exports.newsletterUserDelete = (req, res) => {
     var json = JSON.stringify(newList)
     console.log(json)
     fs.writeFile('./data/emails.json', json, 'utf8', () => { })
-    res.send('<a href="/newsletter/list">Go Back</a>')
+    delete require.cache[require.resolve('../data/emails.json')]
+    res.redirect(303, '/newsletter/list')
 }

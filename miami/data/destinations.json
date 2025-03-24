@@ -1,0 +1,34 @@
+{
+    "locations": [
+        {
+            "page": "nightlife",
+            "name": "Factory Town",
+            "description": "Factory Town is a vibrant and bustling area known for its lively nightlife. The streets are lined with bars, clubs, and restaurants, each offering a unique atmosphere and experience.",
+            "image": "images/destinations/destination"
+        },
+        {
+            "page": "nightlife",
+            "name": "The Old Town",
+            "description": "The Old Town is a historic area filled with charming cobblestone streets, quaint shops, and cozy cafes. It's the perfect place to explore during the day and enjoy a leisurely evening stroll.",
+            "image": "images/destinations/destination"
+        },
+        {
+            "page": "beaches",
+            "name": "South Beach",
+            "description": "South Beach is a picturesque area that offers stunning views of the water. It's a popular spot for dining and entertainment, with many restaurants and bars lining the shore.",
+            "image": "images/destinations/destination"
+        },
+        {
+            "page": "beaches",
+            "name": "Crandon Park",
+            "description": "Crandon Park is a beautiful beach destination known for its soft sand and clear waters. It's a great place to relax, sunbathe, and enjoy water sports.",
+            "image": "images/destinations/destination"
+        },
+        {
+            "page": "beaches",
+            "name": "Cape Florida",
+            "description": "Cape Florida is a stunning beach destination that offers breathtaking views of the ocean. It's a popular spot for swimming, sunbathing, and picnicking.",
+            "image": "images/destinations/destination"
+        }
+    ]
+}

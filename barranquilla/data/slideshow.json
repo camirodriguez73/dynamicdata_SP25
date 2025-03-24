@@ -1,0 +1,94 @@
+{
+    "slides": [
+        {
+            "url": "/images/slides/slide1.jpeg",
+            "home": false,
+            "page": "nightlife"
+        },
+        {
+            "url": "/images/slides/slide2.jpeg",
+            "home": false,
+            "page": "nightlife"
+        },
+        {
+            "url": "/images/slides/slide3.jpeg",
+            "home": false,
+            "page": "nightlife"
+        },
+        {
+            "url": "/images/slides/slide4.jpeg",
+            "home": false,
+            "page": "nightlife"
+        },
+        {
+            "url": "/images/slides/slide5.jpeg",
+            "home": true,
+            "page": "culture"
+        },
+        {
+            "url": "/images/slides/slide6.jpeg",
+            "home": false,
+            "page": "culture"
+        },
+        {
+            "url": "/images/slides/slide7.jpeg",
+            "home": true,
+            "page": "culture"
+        },
+        {
+            "url": "/images/slides/slide8.jpeg",
+            "home": false,
+            "page": "culture"
+        },
+        {
+            "url": "/images/slides/slide9.jpeg",
+            "home": true,
+            "page": "cuisine"
+        },
+        {
+            "url": "/images/slides/slide10.jpeg",
+            "home": false,
+            "page": "cuisine"
+        },
+        {
+            "url": "/images/slides/slide11.jpeg",
+            "home": false,
+            "page": "cuisine"
+        },
+        {
+            "url": "/images/slides/slide12.jpeg",
+            "home": false,
+            "page": "cuisine"
+        },
+        {
+            "url": "/images/slides/slide13.jpeg",
+            "home": true,
+            "page": "shopping"
+        },
+        {
+            "url": "/images/slides/slide14.jpeg",
+            "home": false,
+            "page": "shopping"
+        },
+        {
+            "url": "/images/slides/slide15.jpeg",
+            "home": false,
+            "page": "shopping"
+        },
+        {
+            "url": "/images/slides/slide16.jpeg",
+            "home": false,
+            "page": "shopping"
+        },
+        {
+            "url": "/images/slides/slide17.jpeg",
+            "home": true,
+            "page": "culture"
+        },
+        {
+            "url": "/images/slides/slide18.jpeg",
+            "home": true,
+            "page": "culture"
+        }
+    ]
+}

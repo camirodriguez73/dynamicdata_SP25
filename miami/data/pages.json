@@ -1,0 +1,14 @@
+{
+    "pages": [
+        {
+            "page": "nightlife",
+            "title": "Miami At Night",
+            "description": "Miami is known for its vibrant nightlife, with a variety of clubs, bars, and restaurants to choose from."
+        },
+        {
+            "page": "beaches",
+            "title": "Miami Beaches",
+            "description": "Miami is famous for its beautiful beaches, art deco architecture, and lively atmosphere."
+        }
+    ]
+}

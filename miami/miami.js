@@ -5,11 +5,23 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: true }))
 const handler = require('./lib/handler')
 
+//Setup static routing
+app.use(express.static('./public'))
+
 //Import navigation data
 let navigation = require("./data/navigation.json")
 
 //import slideshow
 let slideshow = require("./data/slideshow.json")
+
+//import gallery
+let gallery = require("./data/gallery.json")
+
+// import page data
+let content = require("./data/pages.json")
+
+// import destinations
+let destinations = require("./data/destinations.json")
 
 // Setup template engine
 const handlebars = require('express-handlebars')
@@ -21,17 +33,42 @@ app.get('/', (request, response) => {
     let slides = slideshow.slides.filter((slide) => {
         return slide.home = true
     })
-
     response.type("text/html")
     response.render("page", {
         title: "Miami Travel Site",
         nav: navigation,
-        slides: slides
+        slides: slides,
+        images: gallery.images
     })
 })
 
-app.get('/page/:page', (request, response) => {
 
+//dynamic routes for pages
+app.get('/page/:page', (request, response) => {
+    // filter pages object to get pages from request.params.page
+    let page = content.pages.filter((item) => {
+        return item.page = request.params.page
+    })
+
+    // filter slides object to get slides from request.params.page
+    let slides = slideshow.slides.filter((slide) => {
+        return slide.page = request.params.page
+    })
+
+    // filter slides
+    let dest = destinations.locations.filter((location) => {
+        return location.page = request.params.page
+    })
+
+    response.type("text/html")
+    response.render("page", {
+        title: page[0].title,
+        description: page[0].description,
+        nav: navigation,
+        //locations: dest,
+        slides: slides,
+        images: gallery.images
+    })
 })
 
 app.get('/beaches', (request, response) => {

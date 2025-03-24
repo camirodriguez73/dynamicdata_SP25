@@ -1,0 +1,12 @@
+<div class="row owl-carousel owl-theme">
+    {{#each destinations}}
+
+    <div class="card">
+        <img src="{{this.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h3> {{this.name}}</h3>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

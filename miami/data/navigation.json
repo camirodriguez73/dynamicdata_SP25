@@ -11,15 +11,15 @@
         },
         {
             "text": "Miami at Night",
-            "href": "/nightlife"
+            "href": "page/nightlife"
         },
         {
             "text": "Miami Beaches",
-            "href": "/beaches"
+            "href": "page/beaches"
         },
         {
             "text": "About Miami",
-            "href": "/about"
+            "href": "page/about"
         },
         {
             "text": "Newsletter Signup",

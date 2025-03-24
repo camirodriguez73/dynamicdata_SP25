@@ -1,0 +1,102 @@
+{
+    "locations": [
+        {
+            "page": "nightlife",
+            "name": "Frogg Club",
+            "description": "Frogg Club is a popular nightclub, known for its electrifying atmosphere, top DJs, and vibrant dance floors that keep the party all night.",
+            "image": "/images/destinations/frogg-club.jpg",
+            "googleMap": "https://maps.app.goo.gl/YbrM2TgHqNHHuCp49"
+        },
+        {
+            "page": "nightlife",
+            "name": "Trucupey",
+            "description": "A go-to spot for lovers of Latin music, Trucupey Latin Disco features live performances, salsa dancing, and a high-energy crowd.",
+            "image": "/images/destinations/trucupey.jpg",
+            "googleMap": "https://maps.app.goo.gl/Lo96KXUQmQpfxNfe8"
+        },
+        {
+            "page": "nightlife",
+            "name": "La Troja",
+            "description": "La Troja is an iconic salsa club in Barranquilla, where locals and visitors come together to dance to traditional Caribbean rhythms.",
+            "image": "/images/destinations/la-troja.jpg",
+            "googleMap": "https://maps.app.goo.gl/urwzEcwF4cANkWAD8"
+        },
+        {
+            "page": "culture",
+            "name": "Museo del Caribe",
+            "description": "Museo del Caribe is a cultural landmark showcasing the rich history, art, and traditions of Colombia’s Caribbean region.",
+            "image": "/images/destinations/museo-del-caribe.jpg",
+            "googleMap": "https://maps.app.goo.gl/4jRwxYBHjaox26yr9"
+        },
+        {
+            "page": "culture",
+            "name": "Museo del Carnaval",
+            "description": "Museo del Carnaval is a must-visit for those interested in Barranquilla’s famous Carnival, featuring exhibits, costumes, and interactive displays.",
+            "image": "/images/destinations/museo-del-carnaval.jpg",
+            "googleMap": "https://maps.app.goo.gl/47CNTwFfTKxZQNDVA"
+        },
+        {
+            "page": "culture",
+            "name": "Teatro Amira de la Rosa",
+            "description": "Teatro Amira de la Rosa is Barranquilla’s historic theater, hosting performances ranging from classical music to contemporary plays.",
+            "image": "/images/destinations/teatro-amira.jpg",
+            "googleMap": "https://maps.app.goo.gl/C69MZvs6H5eynnyu6"
+        },
+        {
+            "page": "cuisine",
+            "name": "La Cueva",
+            "description": "La Cueva is a historic restaurant and bar that once hosted literary greats like Gabriel García Márquez, offering authentic Colombian cuisine and a nostalgic atmosphere.",
+            "image": "/images/destinations/la-cueva.jpg",
+            "googleMap": "https://maps.app.goo.gl/b9uAjtZBuoRz17g29"
+        },
+        {
+            "page": "cuisine",
+            "name": "Varadero",
+            "description": "Varadero is a top-rated seafood restaurant in Barranquilla, known for its fresh ingredients and Cuban-inspired ambiance.",
+            "image": "/images/destinations/varadero.jpg",
+            "googleMap": "https://maps.app.goo.gl/4CY12N8Dm8uAaqhM9"
+        },
+        {
+            "page": "cuisine",
+            "name": "El Celler",
+            "description": "A hidden gem offering gourmet international cuisine with a Colombian twist, El Celler is known for its elegant setting and exceptional service.",
+            "image": "/images/destinations/el-celler.jpg",
+            "googleMap": "https://maps.app.goo.gl/erAwGx9fPmKvSWYc6"
+        },
+        {
+            "page": "shopping",
+            "name": "Buenavista Mall",
+            "description": "Buenavista Mall is Barranquilla’s premier shopping destination, featuring high-end brands, a variety of restaurants, and an entertainment center.",
+            "image": "/images/destinations/buenavista.jpg",
+            "googleMap": "https://maps.app.goo.gl/guX6V1fH4NEaBqNY7"
+        },
+        {
+            "page": "shopping",
+            "name": "Portal del Prado",
+            "description": "A well-known shopping mall with a mix of local and international stores, Portal del Prado is a great spot for fashion, electronics, and dining.",
+            "image": "/images/destinations/portal-del-prado.jpg",
+            "googleMap": "https://maps.app.goo.gl/dviHM3K1Zztec9Fz9"
+        },
+        {
+            "page": "shopping",
+            "name": "Artisanal Markets",
+            "description": "For a more local experience, the Calle 72 artisanal markets offer crafts, fresh produce, and traditional Colombian goods.",
+            "image": "/images/destinations/galeria-de-artesanias.jpg",
+            "googleMap": "https://maps.app.goo.gl/6RzSjvG5C7KT3G3q7"
+        },
+        {
+            "page": "culture",
+            "name": "Hotel El Prado",
+            "description": "Hotel El Prado is a historic landmark in Barranquilla, known for its grand architecture, luxurious accommodations, and storied past.",
+            "image": "/images/destinations/hotel-el-prado.jpg",
+            "googleMap": "https://maps.app.goo.gl/ctujxqezaABsYT9eA"
+        },
+        {
+            "page": "cuisine",
+            "name": "Malecón del Río",
+            "description": "The Malecón del Río is a scenic boardwalk along the Magdalena River, offering a variety of dining options with stunning waterfront views.",
+            "image": "/images/destinations/malecon-del-rio.jpg",
+            "googleMap": "https://maps.app.goo.gl/v5ggcrNdxQwAjsyK9"
+        }
+    ]
+}

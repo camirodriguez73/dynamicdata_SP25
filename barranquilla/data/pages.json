@@ -1,0 +1,29 @@
+{
+    "pages": [
+        {
+            "page": "nightlife",
+            "title": "Nightlife and Entertainment",
+            "description": "The city has a thriving nightlife, with bars, salsa clubs, and discotecas spread across neighborhoods like Alto Prado and Villa Country."
+        },
+        {
+            "page": "culture",
+            "title": "Cultural and Historical Attractions",
+            "description": "Barranquilla is deeply rooted in history and culture, with its Carnaval being one of the biggest in the world."
+        },
+        {
+            "page": "cuisine",
+            "title": "Barranquilla Cuisine",
+            "description": "Barranquilla is famous for its Caribbean-style cuisine, including dishes like sancocho, arepas de huevo, and seafood. Visit the new 'Gran Malecon del Rio' for a variety of dining options."
+        },
+        {
+            "page": "shopping",
+            "title": "Shopping and Markets",
+            "description": "Barranquilla is famous for its Caribbean-style cuisine, including dishes like sancocho, arepas de huevo, and seafood. Visit the new 'Gran Malecon del Rio' for a variety of dining options."
+        },
+        {
+            "page": "about",
+            "title": "About Barranquilla",
+            "description": "Barranquilla, Colombia, is a lively coastal city famous for its Carnaval, a dazzling explosion of music, dance, and culture. Beyond the festivities, the city offers stunning Caribbean sunsets, a rich culinary scene, and landmarks like Hotel El Prado’s architecture and the scenic Malecón del Río. Whether exploring its vibrant nightlife or enjoying fresh seafood by the beach, Barranquilla is full of energy and charm."
+        }
+    ]
+}

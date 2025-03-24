@@ -1,0 +1,33 @@
+{
+    "brand": {
+        "name": "Barranquilla Travel Site",
+        "href": "/",
+        "img": "/images/logo.png"
+    },
+    "links": [
+        {
+            "text": "Home",
+            "href": "/"
+        },
+        {
+            "text": "Nightlife",
+            "href": "/page/nightlife"
+        },
+        {
+            "text": "Culture",
+            "href": "/page/culture"
+        },
+        {
+            "text": "Cuisine",
+            "href": "/page/cuisine"
+        },
+        {
+            "text": "Shopping",
+            "href": "/page/shopping"
+        },
+        {
+            "text": "About Barranquilla",
+            "href": "/page/about"
+        }
+    ]
+}

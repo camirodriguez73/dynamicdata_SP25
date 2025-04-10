@@ -1,10 +1,12 @@
-//initialize express
+//dependencies
 const express = require('express')
 const app = express()
+app.use(express.static('public'))
 const multer = require('multer')
-
-//set up body parser
 const bodyParser = require('body-parser')
+const handlebars = require('express-handlebars')
+app.engine('handlebars', handlebars.engine())
+app.set('view engine', 'handlebars')
 
 //define our models and init database
 const { Sequelize, Model, DataTypes } = require('sequelize')
@@ -33,10 +35,7 @@ sequelize.sync()
     console.log('Database & tables created!')
   })
 
-//initialize handlebars
-const handlebars = require('express-handlebars')
-app.engine('handlebars', handlebars.engine())
-app.set('view engine', 'handlebars')
+
 
 //set the server port
 const port = process.env.port || 3000

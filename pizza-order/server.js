@@ -7,11 +7,13 @@ const handlebars = require('express-handlebars')
 app.engine('handlebars', handlebars.engine())
 app.set('view engine', 'handlebars')
 
-//set the server port
-const port = process.env.port || 3000
-
 //import body-parser
 const bodyParser = require('body-parser')
+//Initialize bodyparser.. converts POST request objects to json
+app.use(bodyParser.urlencoded({ extended: true }))
+
+//set the server port
+const port = process.env.port || 3000
 
 //Define our models and init database 
 const { Sequelize, Model, DataTypes } = require('sequelize')
@@ -47,8 +49,7 @@ const Order = sequelize.define('Orders', {
 Order.belongsTo(Customer)
 Customer.hasMany(Order)
 
-//Initialize bodyparser.. converts POST request objects to json
-app.use(bodyParser.urlencoded({ extended: true }))
+
 
 //sync the models to the database
 sequelize.sync()
@@ -61,13 +62,14 @@ app.get('/', (req, res) => {
 
 // C R U D
 
-//create a customer
+// create a customer
 app.get('/customer/create', (req, res) => {
   // req.file is the name of your file in the form above, here 'avatar'
   // req.body will hold the text fields, if there were any 
   res.type('text/html')
   res.render('customer')
 });
+
 // C create
 app.post('/customer/create', async (req, res) => {
   // req.file is the name of your file in the form above, here 'avatar'
@@ -89,6 +91,7 @@ app.post('/customer/create', async (req, res) => {
   res.redirect('/customers')
   // res.render('customers',{customers})
 });
+
 // R read  
 //display all customers
 app.get('/customers', async (req, res) => {
@@ -100,6 +103,7 @@ app.get('/customers', async (req, res) => {
     res.render('customers', { "customers": data })
   });
 });
+
 //display specific customer by id.. also a R read operation
 app.get('/customer/details/:id', async (req, res) => {
   // req.file is the name of your file in the form above, here 'avatar'
@@ -112,6 +116,7 @@ app.get('/customer/details/:id', async (req, res) => {
     res.render('customerdetails', { "customers": data })
   });
 });
+
 //edit a customer
 app.get('/customer/edit/:id', async (req, res) => {
   // req.file is the name of your file in the form above, here 'avatar'
@@ -160,15 +165,74 @@ app.get('/customer/delete/:id', async (req, res) => {
   res.redirect('/customers')
 
 });
-// Order process
-//create a customer
-app.get('/order/create', (req, res) => {
-  // req.file is the name of your file in the form above, here 'avatar'
-  // req.body will hold the text fields, if there were any 
-  res.type('text/html')
-  res.render('order')
+
+
+// ORDER PROCESS
+
+//create an order (we need to pass the customer id to relate it to the order)
+app.get('/order/create/:id', async (req, res) => {
+  // get customer
+  const customers = await Customer.findOne({ where: { id: req.params.id }, raw: true }).then((data) => {
+    console.log("data")
+    console.log(data)
+    console.log("********")
+    res.type('text/html')
+    res.render('order', { "customer": data })
+  });
 });
 
+app.post("/order/create", async (req, res) => {
+  console.log(req.body)
+
+  let total = 0.0
+  let size = req.body.size
+  let toppings = req.body.toppings
+
+  if (size == 'S') {
+    total += 10.00
+  } else if (size == 'M') {
+    total += 15.00
+  } else if (size == 'L') {
+    total += 18.00
+  } else if (size == 'XL') {
+    total += 22.00
+  }
+
+  toppings.forEach((value) => {
+    if (value == 'ham') {
+      total += 3.50
+    }
+    if (value == 'pepperoni') {
+      total += 3.00
+    }
+    if (value == 'mushrooms') {
+      total += 2.00
+    }
+  });
+  //find the customer we add the order to
+  const customer = await Customer.findByPk(req.body.cid);
+
+  //we can do some error checking
+
+  // add the order to the customer
+  const newOrder = await customer.createOrder({
+    size: size,
+    toppings: toppings.toString(),
+    notes: req.body.notes,
+    total: total,
+    status: req.body.status
+  })
+  res.type('text/html')
+  res.redirect('/orders')
+})
+
+app.get("/orders", async (req, res) => {
+  const orders = await Order.findAll({ include: [{ model: Customer, required: true }] }).then((data) => {
+    console.log(data)
+    res.type('text/html')
+    res.render('orders', { "orders": data })
+  });
+});
 
 //set up error handling 
 //not found 
